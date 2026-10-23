@@ -1,0 +1,271 @@
+/* ============================================================
+   Hawkeyes Optical System — shared frontend styles (Bootstrap 5 base)
+   Light mode design — tasteskill house style
+   ============================================================ */
+
+:root {
+  --hk-primary: #2563eb;      /* vibrant blue */
+  --hk-accent: #0ea5e9;       /* sky blue */
+  --hk-bg: #f8fafc;
+  --hk-surface: #ffffff;
+  --hk-text: #1e293b;
+  --hk-text-muted: #64748b;
+  --hk-border: #e2e8f0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background-color: var(--hk-bg);
+  color: var(--hk-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Navbar ===== */
+.hk-navbar {
+  background: var(--hk-surface);
+  border-bottom: 1px solid var(--hk-border);
+}
+.hk-navbar .navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--hk-text) !important;
+}
+.hk-navbar .navbar-brand:hover {
+  color: var(--hk-primary) !important;
+}
+.hk-navbar .nav-link {
+  color: var(--hk-text-muted) !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.hk-navbar .nav-link:hover {
+  color: var(--hk-primary) !important;
+  background: rgba(37, 99, 235, 0.05);
+}
+.hk-navbar .nav-link.active {
+  color: var(--hk-primary) !important;
+  background: rgba(37, 99, 235, 0.1);
+  font-weight: 600;
+}
+.hk-navbar .navbar-text {
+  color: var(--hk-text-muted) !important;
+}
+.hk-navbar .btn {
+  color: var(--hk-text) !important;
+  border-color: var(--hk-border) !important;
+  background: transparent;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+}
+.hk-navbar .btn:hover {
+  background: var(--hk-primary) !important;
+  color: #fff !important;
+  border-color: var(--hk-primary) !important;
+}
+
+/* ===== Cards (flat, no shadow at rest) ===== */
+.hk-card {
+  border: 1px solid var(--hk-border);
+  border-radius: 0.5rem;
+  background: var(--hk-surface);
+}
+.hk-card .card-header {
+  background: var(--hk-surface);
+  border-bottom: 1px solid var(--hk-border);
+  font-weight: 600;
+  color: var(--hk-text);
+  padding: 0.875rem 1rem;
+}
+.hk-card .card-body {
+  background: var(--hk-surface);
+}
+
+/* ===== Login page (flat, no gradient) ===== */
+.hk-login-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f4ff;
+  padding: 1rem;
+}
+.hk-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--hk-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+.hk-login-wrap .card {
+  border: 1px solid var(--hk-border);
+  border-radius: 0.75rem;
+  background: var(--hk-surface);
+}
+
+/* ===== Stat tiles (flat) ===== */
+.hk-stat .card {
+  border: 1px solid var(--hk-border);
+  border-radius: 0.5rem;
+  background: var(--hk-surface);
+}
+.hk-stat .display-6 {
+  color: var(--hk-primary);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+/* ===== Tables ===== */
+.table thead th {
+  background: var(--hk-surface);
+  color: var(--hk-text-muted);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--hk-border);
+  padding: 0.75rem 1rem;
+}
+.table tbody td {
+  vertical-align: middle;
+  padding: 0.75rem 1rem;
+  color: var(--hk-text);
+  border-bottom: 1px solid var(--hk-border);
+}
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+.table tbody tr:hover {
+  background-color: rgba(37, 99, 235, 0.03);
+}
+
+/* ===== Forms & inputs ===== */
+.form-control,
+.form-select {
+  border: 1px solid var(--hk-border);
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--hk-surface);
+  color: var(--hk-text);
+  font-size: 0.9375rem;
+  transition: border-color 0.15s ease;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--hk-primary);
+  outline: none;
+  box-shadow: none;
+}
+.form-control::placeholder {
+  color: var(--hk-text-muted);
+}
+.form-label {
+  font-weight: 600;
+  color: var(--hk-text);
+  font-size: 0.8125rem;
+  margin-bottom: 0.25rem;
+}
+
+/* ===== Buttons (flat, no shadow) ===== */
+.btn-primary {
+  background: var(--hk-primary);
+  border: none;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+.btn-primary:active {
+  background: #1e40af;
+}
+.btn-outline-primary {
+  color: var(--hk-primary);
+  border-color: var(--hk-primary);
+  font-weight: 500;
+  border-radius: 0.375rem;
+}
+.btn-outline-primary:hover {
+  background: var(--hk-primary);
+  color: #fff;
+}
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.8125rem;
+}
+
+/* ===== Status chips (flat, no shadow) ===== */
+.st-pending   { background: #fef3c7; color: #92400e !important; border: 1px solid #fde68a; }
+.st-confirmed { background: #dbeafe; color: #1e40af !important; border: 1px solid #bfdbfe; }
+.st-completed { background: #d1fae5; color: #065f46 !important; border: 1px solid #a7f3d0; }
+.st-cancelled { background: #f1f5f9; color: #475569 !important; border: 1px solid #e2e8f0; }
+.st-no_show   { background: #fee2e2; color: #991b1b !important; border: 1px solid #fecaca; }
+
+/* ===== Badges ===== */
+.badge.bg-light.text-dark {
+  border: 1px solid var(--hk-border);
+  color: var(--hk-text-muted);
+}
+
+/* ===== Eye columns ===== */
+.eye-col { text-align: center; }
+.eye-col th {
+  background: #f8fafc;
+  color: var(--hk-text-muted);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid var(--hk-border);
+}
+.eye-col td {
+  font-variant-numeric: tabular-nums;
+  color: var(--hk-text);
+  border: 1px solid var(--hk-border);
+}
+
+/* ===== Footer ===== */
+footer.hk-footer {
+  color: var(--hk-text-muted);
+  font-size: 0.8125rem;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid var(--hk-border);
+}
+
+/* ===== Modal (flat) ===== */
+.modal-content {
+  border: 1px solid var(--hk-border);
+  border-radius: 0.5rem;
+}
+.modal-header {
+  background: var(--hk-surface);
+  border-bottom: 1px solid var(--hk-border);
+}
+.modal-footer {
+  border-top: 1px solid var(--hk-border);
+}
+
+/* ===== Page titles ===== */
+main h3 {
+  color: var(--hk-text);
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  font-size: 1.5rem;
+}
+
+/* ===== Utility ===== */
+.text-muted { color: var(--hk-text-muted) !important; }

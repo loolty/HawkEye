@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hawkeyes — Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <header id="hk-navbar"></header>
+
+  <main class="container py-4">
+    <div class="d-flex align-items-center mb-4" style="gap: 0.75rem;">
+      <div class="hk-logo" style="width: 40px; height: 40px; font-size: 1rem; border-radius: 10px;">HK</div>
+      <h3 class="mb-0" id="welcomeTitle">Dashboard</h3>
+    </div>
+    <div id="pageAlert"></div>
+
+    <!-- Staff: clinic counters -->
+    <section id="staffStats" class="row g-3 mb-4 d-none">
+      <div class="col-6 col-lg hk-stat">
+        <div class="card h-100"><div class="card-body text-center p-3">
+          <div class="display-6">0</div><div class="text-muted">Total Patients</div></div></div>
+      </div>
+      <div class="col-6 col-lg hk-stat">
+        <div class="card h-100"><div class="card-body text-center p-3">
+          <div class="display-6">0</div><div class="text-muted">Prescriptions</div></div></div>
+      </div>
+      <div class="col-6 col-lg hk-stat">
+        <div class="card h-100"><div class="card-body text-center p-3">
+          <div class="display-6">0</div><div class="text-muted">Today's Visits</div></div></div>
+      </div>
+      <div class="col-6 col-lg hk-stat">
+        <div class="card h-100"><div class="card-body text-center p-3">
+          <div class="display-6">0</div><div class="text-muted">Upcoming Follow-ups</div></div></div>
+      </div>
+      <div class="col-6 col-lg hk-stat">
+        <div class="card h-100"><div class="card-body text-center p-3">
+          <div class="display-6">0</div><div class="text-muted">Audits Today</div></div></div>
+      </div>
+    </section>
+
+    <section class="row g-3">
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-header" id="upcomingHeader">Upcoming Appointments</div>
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover mb-0 align-middle">
+              <thead><tr><th>Date</th><th>Time</th><th>Patient</th><th>Status</th></tr></thead>
+              <tbody id="upcomingBody"><tr><td colspan="4" class="text-center text-muted py-4">Loading…</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <!-- Patient sees their latest prescription; staff see the recent list -->
+        <div class="card h-100">
+          <div class="card-header" id="rxHeader">Prescriptions</div>
+          <div class="card-body p-0" id="rxPanel">
+            <div class="text-center text-muted py-4">Loading…</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="hk-footer">Hawkeyes Optical — Prescription Management &amp; Appointment Follow-Up System</footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/js/dashboard.js"></script>
+</body>
+</html>
