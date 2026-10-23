@@ -6,6 +6,18 @@
 
 For Windows, `run.bat` does steps 2–4 and tries to clear port 8000 first.
 
+# Demo credentials
+These accounts are created by `python scripts/init_db.py --seed` when the `users` table is empty.
+
+| Role | Email | Password |
+|---|---|---|
+| Admin | `admin@hawkeyes.local` | `Admin@123` |
+| Front desk | `frontdesk@hawkeyes.local` | `Front@123` |
+| Optometrist | `optometrist@hawkeyes.local` | `Optom@123` |
+| Patient | `patient@hawkeyes.local` | `Patient@123` |
+
+MySQL demo login (used by `.env.example`): `DB_USER=root`, `DB_PASSWORD=hawkeye`.
+
 # Architecture
 - **Backend:** Python / FastAPI serving JSON under `/api/*`.
 - **Frontend:** Bootstrap 5 + vanilla JS, served as static files at `/`.
